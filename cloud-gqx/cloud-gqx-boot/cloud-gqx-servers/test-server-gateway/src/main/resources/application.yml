@@ -1,0 +1,31 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        group: haha
+    sentinel:
+      transport:
+        dashboard: localhost:8099
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+  application:
+    name: test-server-gateway
+server:
+  port: 10003
+dubbo:
+  registry:
+    address: spring-cloud://localhost:8848
+  protocol:
+    name: dubbo
+    port: -1
+  cloud:
+    subscribed-services: test-server-one
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
