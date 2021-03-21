@@ -6,13 +6,14 @@
 
     <parent>
         <groupId>org.example</groupId>
-        <artifactId>cloud-gqx-servers</artifactId>
+        <artifactId>cloud-gqx-entityapis</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <groupId>org.example</groupId>
-    <artifactId>test-server-oauth</artifactId>
+    <artifactId>test-server-auth-entity-api</artifactId>
     <version>${revision}</version>
 
+    
 </project>

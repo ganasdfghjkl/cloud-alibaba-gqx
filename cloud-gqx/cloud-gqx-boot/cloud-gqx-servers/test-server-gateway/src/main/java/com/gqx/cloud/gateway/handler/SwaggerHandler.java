@@ -12,9 +12,8 @@ import java.util.Optional;
 
 
 /**
- * @author fsl
- * @description: swagger-resource
- * @date 2019-06-0310:47
+ * @author xiaoymin
+ * 2020年10月29日 18:38:01
  */
 @RestController
 public class SwaggerHandler {

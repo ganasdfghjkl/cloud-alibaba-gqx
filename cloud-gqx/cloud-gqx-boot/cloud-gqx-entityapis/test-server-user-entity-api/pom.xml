@@ -6,21 +6,14 @@
 
     <parent>
         <groupId>org.example</groupId>
-        <artifactId>cloud-gqx-boot</artifactId>
+        <artifactId>cloud-gqx-entityapis</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <groupId>org.example</groupId>
-    <artifactId>cloud-gqx-entityapis</artifactId>
+    <artifactId>test-server-user-entity-api</artifactId>
     <version>${revision}</version>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>test-server-one-entity-api</module>
-        <module>test-server-user-entity-api</module>
-        <module>test-server-auth-entity-api</module>
-    </modules>
 
     
 </project>

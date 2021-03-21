@@ -1,12 +1,14 @@
-package com.gqx.cloud.serverone;
-
+package com.gqx.cloud.serverauth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ *
+ */
 @SpringBootApplication
-public class ServerOneApplication {
+public class ServerAuthApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ServerOneApplication.class,args);
+        SpringApplication.run(ServerAuthApplication.class,args);
     }
 }
