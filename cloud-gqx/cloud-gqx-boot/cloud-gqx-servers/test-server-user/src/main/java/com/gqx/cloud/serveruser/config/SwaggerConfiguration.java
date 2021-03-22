@@ -1,4 +1,4 @@
-package com.gqx.cloud.serverone.config;
+package com.gqx.cloud.serveruser.config;
 
 import com.github.xiaoymin.knife4j.spring.annotations.EnableKnife4j;
 import com.google.common.base.Predicates;
@@ -25,6 +25,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class SwaggerConfiguration {
 
 
+
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
@@ -34,7 +35,7 @@ public class SwaggerConfiguration {
                 .select()
                 // // 对所有api进行监控
                 // .apis(RequestHandlerSelectors.any())
-                .apis(RequestHandlerSelectors.basePackage("com.gqx.cloud.serverone.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.gqx.cloud.serveruser.controller"))
                 //不显示错误的接口地址
                 .paths(PathSelectors.any())
                 //错误路径不监控

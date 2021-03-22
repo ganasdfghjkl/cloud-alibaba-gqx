@@ -23,8 +23,10 @@
         <module>cloud-gqx-starters</module>
         <module>cloud-gqx-dependencies</module>
         <module>cloud-gqx-boot</module>
+        <module>cloud-gqx-util</module>
     </modules>
     <properties>
+        <java.version>1.8</java.version>
         <revision>1.0-SNAPSHOT</revision>
         <spring.cloud.version>Hoxton.SR10</spring.cloud.version>
         <spring.cloud.alibaba.version>2.2.5.RELEASE</spring.cloud.alibaba.version>
@@ -32,8 +34,7 @@
         <java.version>1.8</java.version>
         <knife4j.version>2.0.3</knife4j.version>
         <java.jwt.version>3.13.0</java.jwt.version>
+        <spring.kafka.version>2.5.12.RELEASE</spring.kafka.version>
     </properties>
-
-
 
 </project>
