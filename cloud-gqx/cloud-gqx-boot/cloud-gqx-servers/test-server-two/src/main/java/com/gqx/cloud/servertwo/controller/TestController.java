@@ -1,9 +1,5 @@
 package com.gqx.cloud.servertwo.controller;
 
-import com.alibaba.dubbo.config.annotation.Reference;
-import com.gqx.cloud.dubbo.service.ITestService;
-import com.sun.jndi.toolkit.url.Uri;
-import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,12 +24,12 @@ public class TestController {
         String str = restTemplate.getForObject(url,String.class);
         return str;
     }
-    @DubboReference
-    ITestService testService;
-    @GetMapping("/dubbo")
-    public String testDubbo(){
-        return testService.testDubbo();
-    }
+//    @DubboReference
+//    ITestService testService;
+//    @GetMapping("/dubbo")
+//    public String testDubbo(){
+//        return testService.testDubbo();
+//    }
 
 
 }
