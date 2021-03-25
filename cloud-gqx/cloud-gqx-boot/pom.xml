@@ -74,6 +74,13 @@
                 <artifactId>cloud-gqx-util</artifactId>
                 <version>${revision}</version>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/com.dangdang/elastic-job-lite-spring -->
+            <dependency>
+                <groupId>com.dangdang</groupId>
+                <artifactId>elastic-job-lite-spring</artifactId>
+                <version>${elastic.job.spring.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 </project>

@@ -35,6 +35,7 @@
         <knife4j.version>2.0.3</knife4j.version>
         <java.jwt.version>3.13.0</java.jwt.version>
         <spring.kafka.version>2.5.12.RELEASE</spring.kafka.version>
+        <elastic.job.spring.version>2.1.5</elastic.job.spring.version>
     </properties>
 
 </project>
