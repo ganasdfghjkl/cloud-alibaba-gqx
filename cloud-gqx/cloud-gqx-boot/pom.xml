@@ -31,54 +31,8 @@
             </dependency>
             <dependency>
                 <groupId>org.example</groupId>
-                <artifactId>test-server-one</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.example</groupId>
-                <artifactId>test-server-two</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.example</groupId>
-                <artifactId>test-server-oauth</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.example</groupId>
-                <artifactId>test-server-getway</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.example</groupId>
                 <artifactId>test-server-one-entity-api</artifactId>
                 <version>${revision}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.xiaoymin</groupId>
-                <artifactId>knife4j-spring-boot-starter</artifactId>
-                <version>${knife4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.auth0</groupId>
-                <artifactId>java-jwt</artifactId>
-                <version>${java.jwt.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.kafka</groupId>
-                <artifactId>spring-kafka</artifactId>
-                <version>${spring.kafka.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.example</groupId>
-                <artifactId>cloud-gqx-util</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/com.dangdang/elastic-job-lite-spring -->
-            <dependency>
-                <groupId>com.dangdang</groupId>
-                <artifactId>elastic-job-lite-spring</artifactId>
-                <version>${elastic.job.spring.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -14,5 +14,20 @@
     <artifactId>cloud-gqx-starters</artifactId>
     <packaging>pom</packaging>
     <version>${revision}</version>
-
+    <modules>
+        <module>gqx-cloud-start</module>
+<!--        <module>gqx-cloud-redis-start</module>-->
+<!--        <module>gqx-cloud-kafka-start</module>-->
+    </modules>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.example</groupId>
+                <artifactId>cloud-gqx-dependencies</artifactId>
+                <version>${revision}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
