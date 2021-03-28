@@ -85,7 +85,7 @@
             <!-- starts -->
             <dependency>
                 <groupId>org.example</groupId>
-                <artifactId>gqx-cloud-start</artifactId>
+                <artifactId>gqx-cloud-starter</artifactId>
                 <version>${revision}</version>
             </dependency>
         </dependencies>
