@@ -6,29 +6,28 @@
 
     <parent>
         <groupId>org.example</groupId>
-        <artifactId>cloud-gqx-servers</artifactId>
+        <artifactId>cloud-gqx-starters</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <groupId>org.example</groupId>
-    <artifactId>test-server-user</artifactId>
+    <artifactId>gqx-cloud-swagger2-starter</artifactId>
     <version>${revision}</version>
 
     <dependencies>
         <dependency>
-            <groupId>org.example</groupId>
-            <artifactId>gqx-cloud-starter</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.example</groupId>
-            <artifactId>gqx-cloud-swagger2-starter</artifactId>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-spring-boot-starter</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.kafka</groupId>
-            <artifactId>spring-kafka</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot</artifactId>
         </dependency>
-
     </dependencies>
     
 </project>
