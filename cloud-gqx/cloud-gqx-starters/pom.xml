@@ -17,7 +17,8 @@
     <modules>
         <module>gqx-cloud-starter</module>
         <module>gqx-cloud-swagger2-starter</module>
-        <module>gqx-cloud-redis-start</module>
+        <module>gqx-cloud-redis-starter</module>
+        <module>gqx-cloud-multiple-date-sources-starter</module>
 <!--        <module>gqx-cloud-kafka-start</module>-->
     </modules>
     <dependencyManagement>
