@@ -26,3 +26,16 @@ management:
         include: '*'
 knife4j:
   enable: true
+
+cloud:
+  gqx:
+    multiple:
+      datasource:
+        maxActive: 123
+        sources:
+          -
+            driverClassName: xxxx
+            url: xxxxx
+          -
+            driverClassName: bbbbb
+            url: bbbbb
