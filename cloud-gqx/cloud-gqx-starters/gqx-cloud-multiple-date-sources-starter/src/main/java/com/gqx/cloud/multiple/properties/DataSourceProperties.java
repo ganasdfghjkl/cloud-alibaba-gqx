@@ -8,7 +8,7 @@ import java.util.List;
 
 @ConfigurationProperties(prefix = DataSourceProperties.DATA_SOURCE_PREFIX)
 public class DataSourceProperties {
-    static final String DATA_SOURCE_PREFIX = "cloud.gqx.multiple.datasource";
+    public static final String DATA_SOURCE_PREFIX = "cloud.gqx.multiple.datasource";
     private Integer maxActive;
     private Integer minIdle;
     private Integer initialSize;
@@ -18,8 +18,25 @@ public class DataSourceProperties {
     private Boolean testWhileIdle;
     private Boolean testOnBorrow;
     private Boolean testOnReturn;
+    private Integer MaxPoolPreparedStatementPerConnectionSize;
+    private String filters;
     private List<DataSourceInfoProperties> sources;
 
+    public String getFilters() {
+        return filters;
+    }
+
+    public void setFilters(String filters) {
+        this.filters = filters;
+    }
+
+    public Integer getMaxPoolPreparedStatementPerConnectionSize() {
+        return MaxPoolPreparedStatementPerConnectionSize;
+    }
+
+    public void setMaxPoolPreparedStatementPerConnectionSize(Integer maxPoolPreparedStatementPerConnectionSize) {
+        MaxPoolPreparedStatementPerConnectionSize = maxPoolPreparedStatementPerConnectionSize;
+    }
 
     public Integer getMaxActive() {
         return maxActive;
