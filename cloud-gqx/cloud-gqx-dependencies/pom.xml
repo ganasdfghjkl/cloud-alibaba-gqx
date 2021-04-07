@@ -75,11 +75,7 @@
                 <version>${revision}</version>
             </dependency>
             <!-- https://mvnrepository.com/artifact/com.dangdang/elastic-job-lite-spring -->
-            <dependency>
-                <groupId>com.dangdang</groupId>
-                <artifactId>elastic-job-lite-spring</artifactId>
-                <version>${elastic.job.spring.version}</version>
-            </dependency>
+
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-spring-boot-starter</artifactId>
@@ -98,6 +94,17 @@
                 <artifactId>gqx-cloud-swagger2-starter</artifactId>
                 <version>${revision}</version>
             </dependency>
+            <dependency>
+                <groupId>org.example</groupId>
+                <artifactId>gqx-cloud-multiple-date-sources-starter</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.example</groupId>
+                <artifactId>gqx-cloud-druid-sources-starter</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 </project>

@@ -24,3 +24,37 @@ management:
     web:
       exposure:
         include: '*'
+cloud:
+  gqx:
+    multiple:
+      datasource:
+        enable: true
+        initial-size: 5
+        min-idle: 5
+        max-active: 20
+        max-wait: 60000
+        test-while-idle: true
+        time-between-eviction-runs-millis: 60000
+        min-evictable-idle-time-millis: 300000
+        validation-query: SELECT 1 FROM DUAL
+        test-on-borrow: false
+        test-on-return: false
+        pool-prepared-statements: false
+        max-pool-prepared-statement-per-connection-size: 20
+        filters: stat,wall,log4j
+        sources:
+          -
+            driverClassName: com.mysql.cj.jdbc.Driver
+            url: jdbc:mysql://127.0.0.1:3306/test1?characterEncoding=utf-8&useSSl=false
+            username: root
+            password: 123456
+            dataSourceName: tese1
+          -
+            driverClassName: com.mysql.cj.jdbc.Driver
+            url: jdbc:mysql://127.0.0.1:3306/test2?characterEncoding=utf-8&useSSl=false
+            username: root
+            password: 123456
+            dataSourceName: tese2
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml

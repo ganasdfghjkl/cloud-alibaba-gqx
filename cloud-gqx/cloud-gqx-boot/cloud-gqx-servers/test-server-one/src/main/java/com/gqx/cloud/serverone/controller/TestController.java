@@ -1,5 +1,6 @@
 package com.gqx.cloud.serverone.controller;
 
+import com.gqx.cloud.serverone.service.ITestDbService;
 import io.swagger.annotations.Api;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.recipes.locks.InterProcessMutex;
@@ -18,6 +19,8 @@ public class TestController {
     DiscoveryClient discoveryClient;
     @Resource
     CuratorFramework curatorFramework;
+    @Resource
+    ITestDbService testDbService;
 
     @GetMapping("/getServices")
     public List<String> getClients() {
@@ -41,6 +44,11 @@ public class TestController {
     public String index() {
         return "hello this server one";
     }
+    @GetMapping("/test")
+    public String test() {
+        testDbService.testSave();
 
+        return "hello this server one";
+    }
 
 }

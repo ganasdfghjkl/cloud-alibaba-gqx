@@ -16,7 +16,7 @@ import java.util.Objects;
  */
 @Aspect
 @Component
-@Order(Ordered.HIGHEST_PRECEDENCE)
+@Order(0)
 public class DataSourceAOP {
 
     @Before("@annotation(targetDataSource)")
