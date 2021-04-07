@@ -18,8 +18,8 @@
     <modules>
         <module>test-server-one</module>
         <module>test-server-two</module>
-        <module>test-server-auth</module>
-        <module>test-server-user</module>
+        <module>test-server-three</module>
+        <module>test-server-four</module>
         <module>test-server-gateway</module>
     </modules>
     <dependencies>

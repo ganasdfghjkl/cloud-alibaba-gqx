@@ -1,4 +1,4 @@
-package com.gqx.cloud.serveruser.kafka;
+package com.gqx.cloud.serverfour.kafka;
 
 import com.gqx.util.json.JsonUtils;
 import org.apache.kafka.clients.consumer.ConsumerRecord;

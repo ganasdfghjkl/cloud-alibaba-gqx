@@ -1,6 +1,6 @@
-package com.gqx.cloud.serveruser.controller;
+package com.gqx.cloud.serverfour.controller;
 
-import com.gqx.cloud.serveruser.kafka.KafkaProducer;
+import com.gqx.cloud.serverfour.kafka.KafkaProducer;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

@@ -1,6 +1,6 @@
-package com.gqx.cloud.serverauth.auth;
+package com.gqx.cloud.serverthree.auth;
 
-import com.gqx.cloud.serverauth.form.UserLogin;
+import com.gqx.cloud.serverthree.form.UserLogin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

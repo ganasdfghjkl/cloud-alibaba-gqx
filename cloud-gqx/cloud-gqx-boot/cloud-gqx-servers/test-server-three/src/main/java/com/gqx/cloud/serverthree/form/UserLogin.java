@@ -1,4 +1,4 @@
-package com.gqx.cloud.serverauth.form;
+package com.gqx.cloud.serverthree.form;
 
 import io.swagger.annotations.ApiModel;
 
