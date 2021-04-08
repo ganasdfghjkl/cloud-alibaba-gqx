@@ -20,6 +20,10 @@
             <artifactId>gqx-cloud-starter</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.example</groupId>
             <artifactId>gqx-cloud-swagger2-starter</artifactId>
         </dependency>

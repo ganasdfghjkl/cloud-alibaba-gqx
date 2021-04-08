@@ -3,12 +3,21 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
-        group: haha
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
+        refresh-enabled: true
+        shared-configs[0]:
+          dataId: server-three.yaml
+          group: DEFAULT_GROUP
+          refresh: true
     sentinel:
       transport:
         dashboard: localhost:8099
   application:
-    name: test-server-oauth
+    name: test-server-three
+  profiles:
+    active: dev
 server:
   port: 10004
 dubbo:

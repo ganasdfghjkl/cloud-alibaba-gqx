@@ -3,7 +3,6 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
-        group: haha
     sentinel:
       transport:
         dashboard: localhost:8099
@@ -22,7 +21,7 @@ dubbo:
     name: dubbo
     port: -1
   cloud:
-    subscribed-services: test-server-one
+    subscribed-services: test-server-gateway
 management:
   endpoints:
     web:
