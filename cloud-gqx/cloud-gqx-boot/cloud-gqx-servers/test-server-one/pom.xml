@@ -37,6 +37,8 @@
             <groupId>org.example</groupId>
             <artifactId>gqx-cloud-druid-sources-starter</artifactId>
         </dependency>
+
+
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>

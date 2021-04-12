@@ -3,10 +3,16 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
-        group: haha
     sentinel:
       transport:
         dashboard: localhost:8099
+      datasource:
+        flow:
+          nacos:
+            server-addr: 127.0.0.1:8848
+            data-id: ${spring.application.name}-flow-rules
+            groupId: DEFAULT_GROUP
+            rule-type: flow
   application:
     name: test-server-two
 server:

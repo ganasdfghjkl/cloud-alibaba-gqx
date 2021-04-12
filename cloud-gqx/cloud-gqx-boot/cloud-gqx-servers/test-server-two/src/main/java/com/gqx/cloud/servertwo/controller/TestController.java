@@ -35,12 +35,12 @@ public class TestController {
     }
 
 
-//    @DubboReference
-//    ITestService testService;
-//    @GetMapping("/dubbo")
-//    public String testDubbo(){
-//        return testService.testDubbo();
-//    }
+    @DubboReference
+    ITestService testService;
+    @GetMapping("/dubbo")
+    public String testDubbo(){
+        return testService.testDubbo();
+    }
 
     @GetMapping("/test")
     public String test() {
