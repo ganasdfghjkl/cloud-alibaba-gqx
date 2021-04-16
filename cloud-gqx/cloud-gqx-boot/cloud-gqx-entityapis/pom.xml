@@ -18,8 +18,6 @@
 
     <modules>
         <module>test-server-one-entity-api</module>
-        <module>test-server-user-entity-api</module>
-        <module>test-server-auth-entity-api</module>
     </modules>
 
     
