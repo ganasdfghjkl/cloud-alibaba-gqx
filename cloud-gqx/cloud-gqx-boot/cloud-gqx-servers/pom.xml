@@ -20,6 +20,7 @@
         <module>test-server-two</module>
         <module>test-server-three</module>
         <module>test-server-four</module>
+        <module>test-server-five</module>
         <module>test-server-gateway</module>
     </modules>
     <dependencies>

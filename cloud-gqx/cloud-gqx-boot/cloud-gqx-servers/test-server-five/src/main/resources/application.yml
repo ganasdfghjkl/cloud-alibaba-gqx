@@ -1,0 +1,30 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8099
+  application:
+    name: test-server-five
+server:
+  port: 10006
+dubbo:
+  registry:
+    address: spring-cloud://localhost:8848
+  protocol:
+    name: dubbo
+    port: -1
+  cloud:
+    subscribed-services: test-server-one
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+powerjob:
+  worker:
+    akka-port: 27777
+    app-name: ${spring.application.name}
+    server-address: 127.0.0.1:7700
