@@ -21,6 +21,8 @@
         <module>test-server-three</module>
         <module>test-server-four</module>
         <module>test-server-five</module>
+        <module>test-server-six</module>
+        <module>test-server-seven</module>
         <module>test-server-gateway</module>
     </modules>
     <dependencies>

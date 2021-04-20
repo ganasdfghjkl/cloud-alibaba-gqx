@@ -1,21 +1,36 @@
 package com.gqx.cloud.druid.config;
 
 
+import com.alibaba.druid.pool.DruidDataSource;
+import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
+import io.seata.rm.datasource.DataSourceProxy;
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Scope;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.core.io.support.ResourcePatternResolver;
+
+import javax.sql.DataSource;
 
 
 @Configuration
 @ConditionalOnMissingBean(name = "dynamicDataSource")
 public class MybatisPlusConfig {
+
+
+
     /**
      * 分页插件
      */
@@ -25,8 +40,46 @@ public class MybatisPlusConfig {
         interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.MYSQL));
         return interceptor;
     }
+    @Bean
+    public SqlSessionTemplate sqlSessionTemplate(SqlSessionFactory sqlSessionFactory) {
+        return new SqlSessionTemplate(sqlSessionFactory);
+    }
 
+    /**
+     * 从配置文件获取属性构造datasource，注意前缀，这里用的是druid，根据自己情况配置,
+     * 原生datasource前缀取"spring.datasource"
+     *
+     * @return
+     */
+    @Bean
+    @ConfigurationProperties(prefix = "spring.datasource.druid")
+    public DataSource dataSource() {
+        return new DruidDataSource();
+    }
 
+    /**
+     * 构造datasource代理对象，替换原来的datasource
+     * @return
+     */
+    @Bean
+    public DataSourceProxy dataSourceProxy(DataSource dataSource) {
+        return new DataSourceProxy(dataSource);
+    }
+    @Bean(name = "sqlSessionFactory")
+    public SqlSessionFactory sqlSessionFactoryBean(DataSourceProxy dataSourceProxy) throws Exception {
+        MybatisSqlSessionFactoryBean bean = new MybatisSqlSessionFactoryBean();
+        bean.setDataSource(dataSourceProxy);
+        ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+        // bean.setConfigLocation(resolver.getResource("classpath:mybatis-config.xml"));
+
+        SqlSessionFactory factory = null;
+        try {
+            factory = bean.getObject();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return factory;
+    }
 
     @Bean
     public ServletRegistrationBean statViewServlet() {

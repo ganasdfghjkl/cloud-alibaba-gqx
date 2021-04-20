@@ -34,6 +34,11 @@
                 <artifactId>test-server-one-entity-api</artifactId>
                 <version>${revision}</version>
             </dependency>
+            <dependency>
+                <groupId>org.example</groupId>
+                <artifactId>test-server-seven-entity-api</artifactId>
+                <version>${revision}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>
