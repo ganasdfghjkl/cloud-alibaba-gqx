@@ -131,8 +131,11 @@
                 <artifactId>gqx-cloud-druid-sources-starter</artifactId>
                 <version>${revision}</version>
             </dependency>
-
-
+            <dependency>
+                <groupId>org.example</groupId>
+                <artifactId>gqx-cloud-druid-powerjob-starter</artifactId>
+                <version>${revision}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>

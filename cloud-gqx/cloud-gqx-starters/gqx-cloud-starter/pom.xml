@@ -41,6 +41,14 @@
             <groupId>org.example</groupId>
             <artifactId>cloud-gqx-util</artifactId>
         </dependency>
+
+
+        <!-- 配置中心 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
         <!-- 客户端引入 Transport 模块来与 Sentinel 控制台进行通信 -->
         <dependency>
             <groupId>com.alibaba.csp</groupId>

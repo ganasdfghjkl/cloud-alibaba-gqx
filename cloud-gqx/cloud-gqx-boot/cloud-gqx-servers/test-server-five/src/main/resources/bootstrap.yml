@@ -1,0 +1,31 @@
+server:
+  port: 10006
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
+        refresh-enabled: true
+        shared-configs[0]:
+          dataId: powerjob.yaml
+          group: DEFAULT_GROUP
+          refresh: true
+        shared-configs[1]:
+          dataId: dubbo.yaml
+          group: DEFAULT_GROUP
+          refresh: true
+        shared-configs[2]:
+          dataId: sentinel.yaml
+          group: DEFAULT_GROUP
+          refresh: true
+        shared-configs[3]:
+          dataId: knife4j.yaml
+          group: DEFAULT_GROUP
+          refresh: true
+  application:
+    name: test-server-five
+  profiles:
+    active: dev

@@ -20,7 +20,7 @@
         <module>gqx-cloud-redis-starter</module>
         <module>gqx-cloud-multiple-date-sources-starter</module>
         <module>gqx-cloud-druid-sources-starter</module>
-
+        <module>gqx-cloud-druid-powerjob-starter</module>
         <!--        <module>gqx-cloud-kafka-start</module>-->
     </modules>
     <dependencyManagement>
