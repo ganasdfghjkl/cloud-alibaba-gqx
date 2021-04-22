@@ -3,6 +3,7 @@ package com.gqx.cloud.serverone.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.io.Serializable;
 @TableName(value = "test")
@@ -34,5 +35,12 @@ public class Test implements Serializable {
 
     public void setRemark(String remark) {
         this.remark = remark;
+    }
+
+
+    public static void main(String[] args) {
+        System.out.println(new BCryptPasswordEncoder().encode("nacos"));
+        System.out.println(new BCryptPasswordEncoder().encode("nacos"));
+
     }
 }

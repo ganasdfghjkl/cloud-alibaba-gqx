@@ -28,8 +28,8 @@ spring:
           group: DEFAULT_GROUP
           refresh: true
   application:
-    name: test-server-three
+    name: test-server-two
   profiles:
     active: dev
 server:
-  port: 10004
+  port: 10002

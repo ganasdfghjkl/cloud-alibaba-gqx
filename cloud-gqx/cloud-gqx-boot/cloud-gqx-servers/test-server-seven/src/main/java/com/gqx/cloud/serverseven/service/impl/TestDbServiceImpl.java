@@ -8,8 +8,13 @@ import io.seata.spring.annotation.GlobalTransactional;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Random;
+import java.util.concurrent.atomic.AtomicInteger;
+
 @Service
 public class TestDbServiceImpl extends ServiceImpl<TestMapper, Test> implements ITestDbService {
+
+    static AtomicInteger atomicInteger = new AtomicInteger(2);
 
     @Override
     @GlobalTransactional(name = "test",rollbackFor = Exception.class)
@@ -19,5 +24,9 @@ public class TestDbServiceImpl extends ServiceImpl<TestMapper, Test> implements 
         t.setTitle("cs");
         t.setRemark("cs");
         save(t);
+        int i = atomicInteger.getAndIncrement();
+        if (i % 2 ==0){
+            int test = i/0;
+        }
     }
 }

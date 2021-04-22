@@ -1,3 +1,5 @@
+server:
+  port: 10001
 spring:
   cloud:
     nacos:
@@ -31,10 +33,4 @@ spring:
     name: test-server-one
   profiles:
     active: dev
-server:
-  port: 10001
-dubbo:
-  scan:
-    base-packages: com.gqx.cloud.serverone.dubbo
-mybatis-plus:
-  mapper-locations: classpath:/mapper/*Mapper.xml
+

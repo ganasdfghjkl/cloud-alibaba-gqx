@@ -27,9 +27,14 @@ spring:
           dataId: seata.yaml
           group: DEFAULT_GROUP
           refresh: true
+        shared-configs[5]:
+          dataId: kafka.yaml
+          group: DEFAULT_GROUP
+          refresh: true
   application:
-    name: test-server-three
+    name: test-server-four
   profiles:
     active: dev
 server:
-  port: 10004
+  port: 10005
+
