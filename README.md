@@ -46,7 +46,7 @@
 - 服务间调用：dubbo
 - 注册中心：nacos
 - 配置中心：nacos
-- 分布式任务调度：powerJob `http://www.powerjob.tech/`
+- 分布式任务调度：[powerJob](http://www.powerjob.tech/)
 - 消息队列：kafka
 - 缓存：redis
 - 路由中心：gateway
