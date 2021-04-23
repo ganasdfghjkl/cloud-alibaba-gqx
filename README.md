@@ -39,7 +39,7 @@
 规划为自定义的starter父级项目。
 
 ---
-## 组件
+##使用的组件
 - 数据连接池：druid
 - 数据库操作：mybatisPlus 
 - 分布式事务：seata
