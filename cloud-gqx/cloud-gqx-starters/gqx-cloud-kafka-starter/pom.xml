@@ -6,22 +6,20 @@
 
     <parent>
         <groupId>org.example</groupId>
-        <artifactId>cloud-gqx-servers</artifactId>
+        <artifactId>cloud-gqx-starters</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <groupId>org.example</groupId>
-    <artifactId>test-server-three</artifactId>
+    <artifactId>gqx-cloud-kafka-starter</artifactId>
     <version>${revision}</version>
     <dependencies>
         <dependency>
-            <groupId>org.example</groupId>
-            <artifactId>gqx-cloud-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.example</groupId>
-            <artifactId>gqx-cloud-swagger2-starter</artifactId>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
         </dependency>
     </dependencies>
+
+
 </project>

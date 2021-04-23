@@ -21,7 +21,8 @@
         <module>gqx-cloud-multiple-date-sources-starter</module>
         <module>gqx-cloud-druid-sources-starter</module>
         <module>gqx-cloud-druid-powerjob-starter</module>
-        <!--        <module>gqx-cloud-kafka-start</module>-->
+        <module>gqx-cloud-zookeeper-starter</module>
+        <module>gqx-cloud-kafka-starter</module>
     </modules>
     <dependencyManagement>
         <dependencies>

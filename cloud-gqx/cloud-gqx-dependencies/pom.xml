@@ -136,6 +136,16 @@
                 <artifactId>gqx-cloud-druid-powerjob-starter</artifactId>
                 <version>${revision}</version>
             </dependency>
+            <dependency>
+                <groupId>org.example</groupId>
+                <artifactId>gqx-cloud-zookeeper-starter</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.example</groupId>
+                <artifactId>gqx-cloud-kafka-starter</artifactId>
+                <version>${revision}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>

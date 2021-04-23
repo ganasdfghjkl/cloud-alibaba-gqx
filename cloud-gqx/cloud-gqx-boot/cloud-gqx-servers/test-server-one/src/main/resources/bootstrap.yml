@@ -29,6 +29,10 @@ spring:
           dataId: seata.yaml
           group: DEFAULT_GROUP
           refresh: true
+        shared-configs[5]:
+          dataId: zookeeper.yaml
+          group: DEFAULT_GROUP
+          refresh: true
   application:
     name: test-server-one
   profiles:

@@ -1,9 +1,5 @@
-package com.gqx.cloud.servertwo.config;
+package com.gqx.cloud.config;
 
-import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import com.alibaba.cloud.sentinel.SentinelProperties;
 import com.alibaba.cloud.sentinel.datasource.config.NacosDataSourceProperties;
 import com.alibaba.csp.sentinel.datasource.ReadableDataSource;
@@ -12,8 +8,11 @@ import com.alibaba.csp.sentinel.slots.block.flow.FlowRule;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRuleManager;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * 规则持久化 - 推模式
@@ -24,7 +23,6 @@ import javax.annotation.Resource;
  */
 @Configuration
 public class NacosDataSourceConfig {
-
     @Resource
     private SentinelProperties sentinelProperties;
 
@@ -43,5 +41,4 @@ public class NacosDataSourceConfig {
         });
         return new NacosDataSourceConfig();
     }
-
 }
