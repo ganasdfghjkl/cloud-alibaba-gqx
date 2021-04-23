@@ -1,0 +1,29 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: @nacos.discovery.server-addr@
+    config:
+      server-addr: @nacos.config.server-addr@
+      file-extension: yaml
+      refresh-enabled: true
+      shared-configs[0]:
+        dataId: sentinel.yaml
+        group: DEFAULT_GROUP
+        refresh: true
+      shared-configs[1]:
+        dataId: knife4j.yaml
+        group: DEFAULT_GROUP
+        refresh: true
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+  application:
+    name: test-server-gateway
+  profiles:
+    active: @spring.active@
+server:
+  port: 10003
+
+
