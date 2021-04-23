@@ -23,7 +23,7 @@
         <module>cloud-gqx-starters</module>
         <module>cloud-gqx-dependencies</module>
         <module>cloud-gqx-boot</module>
-        <module>cloud-gqx-util</module>
+        <module>cloud-gqx-common</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>

@@ -2,9 +2,9 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
+        server-addr: @nacos.discovery.server-addr@
       config:
-        server-addr: localhost:8848
+        server-addr: @nacos.config.server-addr@
         file-extension: yaml
         refresh-enabled: true
         shared-configs[0]:
@@ -30,6 +30,6 @@ spring:
   application:
     name: test-server-two
   profiles:
-    active: dev
+    active: @spring.active@
 server:
   port: 10002

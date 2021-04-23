@@ -39,7 +39,7 @@
         </dependency>
         <dependency>
             <groupId>org.example</groupId>
-            <artifactId>cloud-gqx-util</artifactId>
+            <artifactId>cloud-gqx-common</artifactId>
         </dependency>
 
 

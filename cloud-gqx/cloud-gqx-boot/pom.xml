@@ -41,4 +41,29 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <!--当前环境-->
+                <spring.active>dev</spring.active>
+                <nacos.config.server-addr>localhost:8848</nacos.config.server-addr>
+                <nacos.discovery.server-addr>localhost:8848</nacos.discovery.server-addr>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <!--当前环境-->
+                <spring.active>dev</spring.active>
+                <nacos.config.server-addr>localhost:8848</nacos.config.server-addr>
+                <nacos.discovery.server-addr>localhost:8848</nacos.discovery.server-addr>
+            </properties>
+        </profile>
+    </profiles>
 </project>
