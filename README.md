@@ -49,7 +49,7 @@
 - 分布式任务调度：[powerJob](http://www.powerjob.tech/)
 - 消息队列：kafka
 - 缓存：redis
-- 路由中心：gateway
+- 路由网关：gateway
 - 在线文档：knife4j
 - 分布式锁：基于zookeeper的分布式锁
 
